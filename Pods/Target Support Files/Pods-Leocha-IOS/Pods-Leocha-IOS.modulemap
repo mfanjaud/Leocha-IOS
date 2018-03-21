@@ -1,0 +1,6 @@
+framework module Pods_Leocha_IOS {
+  umbrella header "Pods-Leocha-IOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
