@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A74AA8B020629A12005CA933 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AB20629A11005CA933 /* ChatViewController.swift */; };
+		A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AB20629A11005CA933 /* LandViewController.swift */; };
 		A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AC20629A12005CA933 /* AppDelegate.swift */; };
 		A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */; };
 		A74AA8B320629A12005CA933 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AE20629A12005CA933 /* LogInViewController.swift */; };
 		A74AA8B420629A12005CA933 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AF20629A12005CA933 /* RegisterViewController.swift */; };
 		A75B34A7205EC60500D443B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75B34A6205EC60500D443B3 /* GoogleService-Info.plist */; };
-		A75F564B205EAE00001523FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F564A205EAE00001523FE /* Assets.xcassets */; };
 		A7AAED9E2062A9A300FDE801 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7AAED9C2062A9A300FDE801 /* MessageCell.xib */; };
 		A7AAED9F2062A9A300FDE801 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AAED9D2062A9A300FDE801 /* CustomMessageCell.swift */; };
 		A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDA72062AA1000FDE801 /* Main.storyboard */; };
 		A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */; };
+		A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DE13862066FD0700C3E584 /* Assets.xcassets */; };
 		F755903CDC88522D8A387AF9 /* Pods_Leocha_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leocha_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E783571D86ABD1540DB51BC /* Pods-Leocha-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.release.xcconfig"; sourceTree = "<group>"; };
-		A74AA8AB20629A11005CA933 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A74AA8AB20629A11005CA933 /* LandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandViewController.swift; sourceTree = "<group>"; };
 		A74AA8AC20629A12005CA933 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A74AA8AE20629A12005CA933 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		A74AA8AF20629A12005CA933 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A75B34A6205EC60500D443B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75F5640205EAE00001523FE /* Leocha-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Leocha-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A75F564A205EAE00001523FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75F5660205EAF8E001523FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Leocha-IOS/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A7AAED9C2062A9A300FDE801 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		A7AAED9D2062A9A300FDE801 /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		A7AAEDA72062AA1000FDE801 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7DE13862066FD0700C3E584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC827E92BBBF40E46647835E /* Pods-Leocha-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				A75F5642205EAE00001523FE /* Leocha-IOS */,
+				A7DE13862066FD0700C3E584 /* Assets.xcassets */,
 				A75F5641205EAE00001523FE /* Products */,
 				18AF62B048A3B5C38D9E4794 /* Pods */,
 				631F77990C868D8EBBA8831D /* Frameworks */,
@@ -104,7 +105,6 @@
 				A75F5656205EAE2D001523FE /* View */,
 				A75F5655205EAE20001523FE /* Controller */,
 				A75F5658205EAE41001523FE /* Supporting Files */,
-				A75F564A205EAE00001523FE /* Assets.xcassets */,
 			);
 			path = "Leocha-IOS";
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				A74AA8AC20629A12005CA933 /* AppDelegate.swift */,
-				A74AA8AB20629A11005CA933 /* ChatViewController.swift */,
+				A74AA8AB20629A11005CA933 /* LandViewController.swift */,
 				A74AA8AE20629A12005CA933 /* LogInViewController.swift */,
 				A74AA8AF20629A12005CA933 /* RegisterViewController.swift */,
 				A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */,
@@ -214,7 +214,7 @@
 				A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */,
 				A7AAED9E2062A9A300FDE801 /* MessageCell.xib in Resources */,
 				A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */,
-				A75F564B205EAE00001523FE /* Assets.xcassets in Resources */,
+				A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +294,7 @@
 				A74AA8B420629A12005CA933 /* RegisterViewController.swift in Sources */,
 				A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */,
 				A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */,
-				A74AA8B020629A12005CA933 /* ChatViewController.swift in Sources */,
+				A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
