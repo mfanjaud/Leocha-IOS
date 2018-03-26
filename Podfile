@@ -11,6 +11,8 @@ target 'Leocha-IOS' do
     pod 'Firebase/Database'
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
 
 end
 

@@ -18,6 +18,7 @@
 		A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDA72062AA1000FDE801 /* Main.storyboard */; };
 		A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */; };
 		A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DE13862066FD0700C3E584 /* Assets.xcassets */; };
+		A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13882067FB0400C3E584 /* MeetupViewController.swift */; };
 		F755903CDC88522D8A387AF9 /* Pods_Leocha_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A7AAEDA72062AA1000FDE801 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7DE13862066FD0700C3E584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7DE13882067FB0400C3E584 /* MeetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupViewController.swift; sourceTree = "<group>"; };
 		FC827E92BBBF40E46647835E /* Pods-Leocha-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				A74AA8AE20629A12005CA933 /* LogInViewController.swift */,
 				A74AA8AF20629A12005CA933 /* RegisterViewController.swift */,
 				A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */,
+				A7DE13882067FB0400C3E584 /* MeetupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,19 +264,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -295,6 +302,7 @@
 				A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */,
 				A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */,
 				A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */,
+				A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.marionfanjaud.Leocha-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -440,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.marionfanjaud.Leocha-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
