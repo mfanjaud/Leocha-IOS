@@ -13,12 +13,12 @@
 		A74AA8B320629A12005CA933 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AE20629A12005CA933 /* LogInViewController.swift */; };
 		A74AA8B420629A12005CA933 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AF20629A12005CA933 /* RegisterViewController.swift */; };
 		A75B34A7205EC60500D443B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75B34A6205EC60500D443B3 /* GoogleService-Info.plist */; };
-		A7AAED9E2062A9A300FDE801 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7AAED9C2062A9A300FDE801 /* MessageCell.xib */; };
-		A7AAED9F2062A9A300FDE801 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AAED9D2062A9A300FDE801 /* CustomMessageCell.swift */; };
 		A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDA72062AA1000FDE801 /* Main.storyboard */; };
 		A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */; };
 		A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DE13862066FD0700C3E584 /* Assets.xcassets */; };
 		A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13882067FB0400C3E584 /* MeetupViewController.swift */; };
+		A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */; };
+		A7DE13A3206A47D900C3E584 /* MeetUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13A2206A47D900C3E584 /* MeetUpService.swift */; };
 		F755903CDC88522D8A387AF9 /* Pods_Leocha_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,12 +33,12 @@
 		A75B34A6205EC60500D443B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75F5640205EAE00001523FE /* Leocha-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Leocha-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F5660205EAF8E001523FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Leocha-IOS/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		A7AAED9C2062A9A300FDE801 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
-		A7AAED9D2062A9A300FDE801 /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		A7AAEDA72062AA1000FDE801 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7DE13862066FD0700C3E584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7DE13882067FB0400C3E584 /* MeetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupViewController.swift; sourceTree = "<group>"; };
+		A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpLocation.swift; sourceTree = "<group>"; };
+		A7DE13A2206A47D900C3E584 /* MeetUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpService.swift; sourceTree = "<group>"; };
 		FC827E92BBBF40E46647835E /* Pods-Leocha-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,15 +69,6 @@
 				4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A74AA8B720629A61005CA933 /* Custom Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A7AAED9D2062A9A300FDE801 /* CustomMessageCell.swift */,
-				A7AAED9C2062A9A300FDE801 /* MessageCell.xib */,
-			);
-			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		A75F5637205EAE00001523FE = {
@@ -129,7 +120,6 @@
 			children = (
 				A7AAEDA72062AA1000FDE801 /* Main.storyboard */,
 				A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */,
-				A74AA8B720629A61005CA933 /* Custom Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +127,8 @@
 		A75F5657205EAE3A001523FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */,
+				A7DE13A2206A47D900C3E584 /* MeetUpService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,7 +207,6 @@
 			files = (
 				A75B34A7205EC60500D443B3 /* GoogleService-Info.plist in Resources */,
 				A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */,
-				A7AAED9E2062A9A300FDE801 /* MessageCell.xib in Resources */,
 				A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */,
 				A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */,
 			);
@@ -296,12 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AAED9F2062A9A300FDE801 /* CustomMessageCell.swift in Sources */,
 				A74AA8B320629A12005CA933 /* LogInViewController.swift in Sources */,
 				A74AA8B420629A12005CA933 /* RegisterViewController.swift in Sources */,
 				A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */,
 				A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */,
 				A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */,
+				A7DE13A3206A47D900C3E584 /* MeetUpService.swift in Sources */,
+				A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */,
 				A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
