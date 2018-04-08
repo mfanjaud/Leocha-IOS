@@ -15,6 +15,10 @@
 		A75B34A7205EC60500D443B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75B34A6205EC60500D443B3 /* GoogleService-Info.plist */; };
 		A7AAEDA82062AA1100FDE801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDA72062AA1000FDE801 /* Main.storyboard */; };
 		A7AAEDAD2062AA7C00FDE801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */; };
+		A7AE5409207A083A0075BBCB /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE5408207A083A0075BBCB /* RoundButton.swift */; };
+		A7AE540B207A0A260075BBCB /* CoreMLGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE540A207A0A260075BBCB /* CoreMLGameViewController.swift */; };
+		A7AE540D207A49640075BBCB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7AE540C207A49640075BBCB /* Inceptionv3.mlmodel */; };
+		A7AE5413207A4BF00075BBCB /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE5412207A4BF00075BBCB /* Objects.swift */; };
 		A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DE13862066FD0700C3E584 /* Assets.xcassets */; };
 		A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13882067FB0400C3E584 /* MeetupViewController.swift */; };
 		A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */; };
@@ -35,6 +39,10 @@
 		A75F5660205EAF8E001523FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Leocha-IOS/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A7AAEDA72062AA1000FDE801 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7AE5408207A083A0075BBCB /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A7AE540A207A0A260075BBCB /* CoreMLGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLGameViewController.swift; sourceTree = "<group>"; };
+		A7AE540C207A49640075BBCB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		A7AE5412207A4BF00075BBCB /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		A7DE13862066FD0700C3E584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7DE13882067FB0400C3E584 /* MeetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupViewController.swift; sourceTree = "<group>"; };
 		A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpLocation.swift; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 				A74AA8AF20629A12005CA933 /* RegisterViewController.swift */,
 				A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */,
 				A7DE13882067FB0400C3E584 /* MeetupViewController.swift */,
+				A7AE540A207A0A260075BBCB /* CoreMLGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			children = (
 				A7AAEDA72062AA1000FDE801 /* Main.storyboard */,
 				A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */,
+				A7AE5405207A06B50075BBCB /* IBDesignable */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,8 +137,8 @@
 		A75F5657205EAE3A001523FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */,
-				A7DE13A2206A47D900C3E584 /* MeetUpService.swift */,
+				A7AE5410207A4BB60075BBCB /* Meetup API */,
+				A7AE5411207A4BC40075BBCB /* CoreMLGame */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +150,32 @@
 				A75F5660205EAF8E001523FE /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7AE5405207A06B50075BBCB /* IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				A7AE5408207A083A0075BBCB /* RoundButton.swift */,
+			);
+			path = IBDesignable;
+			sourceTree = "<group>";
+		};
+		A7AE5410207A4BB60075BBCB /* Meetup API */ = {
+			isa = PBXGroup;
+			children = (
+				A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */,
+				A7DE13A2206A47D900C3E584 /* MeetUpService.swift */,
+			);
+			path = "Meetup API";
+			sourceTree = "<group>";
+		};
+		A7AE5411207A4BC40075BBCB /* CoreMLGame */ = {
+			isa = PBXGroup;
+			children = (
+				A7AE540C207A49640075BBCB /* Inceptionv3.mlmodel */,
+				A7AE5412207A4BF00075BBCB /* Objects.swift */,
+			);
+			path = CoreMLGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,13 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7AE540D207A49640075BBCB /* Inceptionv3.mlmodel in Sources */,
+				A7AE5409207A083A0075BBCB /* RoundButton.swift in Sources */,
 				A74AA8B320629A12005CA933 /* LogInViewController.swift in Sources */,
 				A74AA8B420629A12005CA933 /* RegisterViewController.swift in Sources */,
 				A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */,
 				A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */,
 				A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */,
 				A7DE13A3206A47D900C3E584 /* MeetUpService.swift in Sources */,
+				A7AE540B207A0A260075BBCB /* CoreMLGameViewController.swift in Sources */,
 				A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */,
+				A7AE5413207A4BF00075BBCB /* Objects.swift in Sources */,
 				A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

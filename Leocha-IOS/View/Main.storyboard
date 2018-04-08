@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="8Ny-HH-lhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="8Ny-HH-lhf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AmericanTypewriter.ttc">
-            <string>AmericanTypewriter</string>
-        </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-            <string>HelveticaNeue-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Welcome-->
         <scene sceneID="SAj-Rh-o9q">
@@ -310,7 +301,7 @@
         <!--Mini-game-->
         <scene sceneID="8y7-Ae-nTk">
             <objects>
-                <viewController title="Mini-game" id="9Ce-10-IVZ" sceneMemberID="viewController">
+                <viewController title="Mini-game" id="9Ce-10-IVZ" customClass="CoreMLGameViewController" customModule="Leocha_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lys-y3-R07"/>
                         <viewControllerLayoutGuide type="bottom" id="wXD-S1-v0q"/>
@@ -318,13 +309,105 @@
                     <view key="view" contentMode="scaleToFill" id="B6A-jk-vhe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-fZ-Uah">
+                                <rect key="frame" x="0.0" y="572" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vih-M3-yjd">
+                                        <rect key="frame" x="18" y="17" width="79" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhm-cR-TFD">
+                                        <rect key="frame" x="18" y="48" width="122" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <color key="textColor" red="0.40374207499999998" green="0.54976207020000001" blue="0.7647339702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-jC-Wrz" customClass="RoundButton" customModule="Leocha_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="263" y="17" width="84" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.94137167929999999" green="0.72919696570000003" blue="0.0001400036999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Start"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                <color key="value" red="0.86578601600000005" green="0.011683181860000001" blue="0.2094238102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="9Ce-10-IVZ" eventType="touchUpInside" id="hKR-vq-9jK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0px-VH-Riw" customClass="RoundButton" customModule="Leocha_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="263" y="53" width="84" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.093475155530000006" green="0.14286285639999999" blue="0.3161560893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Skip"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
+                                                <color key="value" red="0.40374207499999998" green="0.54976207020000001" blue="0.7647339702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="skipButtonTapped:" destination="9Ce-10-IVZ" eventType="touchUpInside" id="M5c-6b-XLw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q0p-TT-8hO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5B-oY-anr">
+                                        <rect key="frame" x="17" y="86" width="40" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLr-ud-IR6">
+                                        <rect key="frame" x="46" y="86" width="283" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.093475155530000006" green="0.14286285639999999" blue="0.3161560893" alpha="0.2267765410958904" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cg7-39-RJ4"/>
+                    <connections>
+                        <outlet property="bottomView" destination="wDw-fZ-Uah" id="47N-f9-G60"/>
+                        <outlet property="highscoreLabel" destination="xhm-cR-TFD" id="Vg4-kX-KaA"/>
+                        <outlet property="objectLabel" destination="oLr-ud-IR6" id="XEr-RF-prv"/>
+                        <outlet property="scoreLabel" destination="vih-M3-yjd" id="e4T-Be-wfE"/>
+                        <outlet property="skipButton" destination="0px-VH-Riw" id="erM-Gb-Rew"/>
+                        <outlet property="startButton" destination="NIi-jC-Wrz" id="IAc-Yu-xIb"/>
+                        <outlet property="timeLabel" destination="N5B-oY-anr" id="rA6-gg-EKA"/>
+                        <outlet property="topView" destination="Q0p-TT-8hO" id="6WA-ok-Dur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htn-d7-oDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="1676"/>
+            <point key="canvasLocation" x="1929.5" y="1675.5"/>
         </scene>
         <!--Parental Account-->
         <scene sceneID="hbx-n2-rVx">
@@ -408,7 +491,7 @@
         <!--Log In-->
         <scene sceneID="eQX-LX-CXk">
             <objects>
-                <viewController id="ekz-P8-3aF" sceneMemberID="viewController">
+                <viewController id="ekz-P8-3aF" customClass="LogInViewController" customModule="Leocha_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1s-f4-GIe"/>
                         <viewControllerLayoutGuide type="bottom" id="YEv-15-TLA"/>
@@ -524,7 +607,7 @@
         <image name="Skyline-3" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7TD-eW-yJ0"/>
+        <segue reference="u64-j0-WxW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.093475155530000006" green="0.14286285639999999" blue="0.3161560893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
