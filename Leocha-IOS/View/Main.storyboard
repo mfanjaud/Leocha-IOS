@@ -288,9 +288,9 @@
         <scene sceneID="aXf-UQ-tga">
             <objects>
                 <viewController title="Leocha" id="SzV-ht-u3J" sceneMemberID="viewController">
-                    <skView key="view" contentMode="scaleToFill" id="aCp-Dy-XO6">
+                    <skView key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" asynchronous="NO" sceneName="TitlePage.sks" shouldCullNonVisibleNodes="NO" id="aCp-Dy-XO6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                     </skView>
                     <navigationItem key="navigationItem" id="EIF-7r-ZHM"/>
                 </viewController>

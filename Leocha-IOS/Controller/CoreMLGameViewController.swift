@@ -34,6 +34,8 @@ class CoreMLGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         viewSetup()
         cameraSetup()
         getHighScore()
