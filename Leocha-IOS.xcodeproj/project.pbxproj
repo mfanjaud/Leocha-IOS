@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70FCB1A207EA19100E852A7 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70FCB18207EA19100E852A7 /* EventsTableViewCell.swift */; };
+		A70FCB1B207EA19100E852A7 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70FCB19207EA19100E852A7 /* EventsTableViewCell.xib */; };
+		A72B3069207AC9BF00962D5C /* ChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B3068207AC9BF00962D5C /* ChildPageViewController.swift */; };
+		A72B306B207ACAF500962D5C /* ParentalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B306A207ACAF500962D5C /* ParentalAccountViewController.swift */; };
 		A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AB20629A11005CA933 /* LandViewController.swift */; };
 		A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AC20629A12005CA933 /* AppDelegate.swift */; };
 		A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */; };
@@ -42,15 +46,16 @@
 		A7AE54BA207ABAFC0075BBCB /* Scene01.sks in Resources */ = {isa = PBXBuildFile; fileRef = A7AE54A0207ABAFC0075BBCB /* Scene01.sks */; };
 		A7AE54BB207ABAFC0075BBCB /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE54A1207ABAFC0075BBCB /* TitlePage.swift */; };
 		A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DE13862066FD0700C3E584 /* Assets.xcassets */; };
-		A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13882067FB0400C3E584 /* MeetupViewController.swift */; };
-		A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */; };
-		A7DE13A3206A47D900C3E584 /* MeetUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE13A2206A47D900C3E584 /* MeetUpService.swift */; };
 		F755903CDC88522D8A387AF9 /* Pods_Leocha_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4276E964D4EB1C5081FC204B /* Pods_Leocha_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leocha_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E783571D86ABD1540DB51BC /* Pods-Leocha-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		A70FCB18207EA19100E852A7 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		A70FCB19207EA19100E852A7 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		A72B3068207AC9BF00962D5C /* ChildPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildPageViewController.swift; sourceTree = "<group>"; };
+		A72B306A207ACAF500962D5C /* ParentalAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalAccountViewController.swift; sourceTree = "<group>"; };
 		A74AA8AB20629A11005CA933 /* LandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandViewController.swift; sourceTree = "<group>"; };
 		A74AA8AC20629A12005CA933 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -88,9 +93,6 @@
 		A7AE54A0207ABAFC0075BBCB /* Scene01.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene01.sks; sourceTree = "<group>"; };
 		A7AE54A1207ABAFC0075BBCB /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
 		A7DE13862066FD0700C3E584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7DE13882067FB0400C3E584 /* MeetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupViewController.swift; sourceTree = "<group>"; };
-		A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpLocation.swift; sourceTree = "<group>"; };
-		A7DE13A2206A47D900C3E584 /* MeetUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpService.swift; sourceTree = "<group>"; };
 		FC827E92BBBF40E46647835E /* Pods-Leocha-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leocha-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leocha-IOS/Pods-Leocha-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +165,8 @@
 				A74AA8AE20629A12005CA933 /* LogInViewController.swift */,
 				A74AA8AF20629A12005CA933 /* RegisterViewController.swift */,
 				A74AA8AD20629A12005CA933 /* WelcomeViewController.swift */,
-				A7DE13882067FB0400C3E584 /* MeetupViewController.swift */,
+				A72B306A207ACAF500962D5C /* ParentalAccountViewController.swift */,
+				A72B3068207AC9BF00962D5C /* ChildPageViewController.swift */,
 				A7AE540A207A0A260075BBCB /* CoreMLGameViewController.swift */,
 			);
 			path = Controller;
@@ -174,7 +177,7 @@
 			children = (
 				A7AAEDA72062AA1000FDE801 /* Main.storyboard */,
 				A7AAEDAC2062AA7C00FDE801 /* LaunchScreen.storyboard */,
-				A7AE5405207A06B50075BBCB /* IBDesignable */,
+				A7AE5405207A06B50075BBCB /* Designable */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,19 +200,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A7AE5405207A06B50075BBCB /* IBDesignable */ = {
+		A7AE5405207A06B50075BBCB /* Designable */ = {
 			isa = PBXGroup;
 			children = (
 				A7AE5408207A083A0075BBCB /* RoundButton.swift */,
+				A70FCB18207EA19100E852A7 /* EventsTableViewCell.swift */,
+				A70FCB19207EA19100E852A7 /* EventsTableViewCell.xib */,
 			);
-			path = IBDesignable;
+			path = Designable;
 			sourceTree = "<group>";
 		};
 		A7AE5410207A4BB60075BBCB /* Meetup API */ = {
 			isa = PBXGroup;
 			children = (
-				A7DE13A0206A465900C3E584 /* MeetUpLocation.swift */,
-				A7DE13A2206A47D900C3E584 /* MeetUpService.swift */,
 			);
 			path = "Meetup API";
 			sourceTree = "<group>";
@@ -298,7 +301,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Marion FANJAUD";
 				TargetAttributes = {
 					A75F563F205EAE00001523FE = {
@@ -353,6 +356,7 @@
 				A7AE54B7207ABAFC0075BBCB /* TitlePage.sks in Resources */,
 				A7DE13872066FD0700C3E584 /* Assets.xcassets in Resources */,
 				A7AE54A4207ABAFC0075BBCB /* Assets.xcassets in Resources */,
+				A70FCB1B207EA19100E852A7 /* EventsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70FCB1A207EA19100E852A7 /* EventsTableViewCell.swift in Sources */,
 				A7AE54B6207ABAFC0075BBCB /* GameScene.swift in Sources */,
 				A7AE54BB207ABAFC0075BBCB /* TitlePage.swift in Sources */,
 				A7AE540D207A49640075BBCB /* Inceptionv3.mlmodel in Sources */,
@@ -442,11 +447,10 @@
 				A74AA8B220629A12005CA933 /* WelcomeViewController.swift in Sources */,
 				A74AA8B120629A12005CA933 /* AppDelegate.swift in Sources */,
 				A74AA8B020629A12005CA933 /* LandViewController.swift in Sources */,
-				A7DE13A3206A47D900C3E584 /* MeetUpService.swift in Sources */,
 				A7AE540B207A0A260075BBCB /* CoreMLGameViewController.swift in Sources */,
-				A7DE13A1206A465900C3E584 /* MeetUpLocation.swift in Sources */,
+				A72B306B207ACAF500962D5C /* ParentalAccountViewController.swift in Sources */,
 				A7AE5413207A4BF00075BBCB /* Objects.swift in Sources */,
-				A7DE13892067FB0400C3E584 /* MeetupViewController.swift in Sources */,
+				A72B3069207AC9BF00962D5C /* ChildPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +471,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -474,6 +479,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -525,6 +531,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -532,6 +539,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

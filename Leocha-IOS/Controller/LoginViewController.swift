@@ -2,16 +2,17 @@
 //  LogInViewController.swift
 //  Leocha-IOS
 //
-//  This is the view controller where users login
+
 
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 
 class LogInViewController: UIViewController {
 
-    //Textfields pre-linked with IBOutlets
+    
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
@@ -28,13 +29,18 @@ class LogInViewController: UIViewController {
     @IBAction func logInPressed(_ sender: AnyObject) {
         //Log in the user
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){ (user,error) in
+            SVProgressHUD.show()
+            
             if error != nil {
                 print(error!)
+                SVProgressHUD.showError(withStatus: "Failed")
             }
             else {
                 print("Login successful!")
-                self.performSegue(withIdentifier: "goToChat", sender: self)
+                SVProgressHUD.showSuccess(withStatus: "Succeeded")
+                self.performSegue(withIdentifier: "goToWelcome", sender: self)
             }
+            SVProgressHUD.dismiss(withDelay: 0.5)
         }
     }
 

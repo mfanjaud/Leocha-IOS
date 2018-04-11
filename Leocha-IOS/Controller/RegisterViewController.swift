@@ -8,44 +8,42 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterViewController: UIViewController {
 
-    
-    //Pre-linked IBOutlets
 
-    @IBOutlet var emailTextfield: UITextField!
-    @IBOutlet var passwordTextfield: UITextField!
+    @IBOutlet weak var emailTextfield: UITextField!
+    
+    @IBOutlet weak var passwordTextfield: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-
-  
-    @IBAction func registerPressed(_ sender: AnyObject) {
+    @IBAction func registerPressed(_ sender: Any) {
         
-
+        SVProgressHUD.show()
         
-        //TODO: Set up a new user on our Firbase database
-        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
+            (user, error) in
+            
             if error != nil {
                 print(error!)
-            }else{
-                print("Registration Successful!")
-                self.performSegue(withIdentifier: "goToLandpage", sender: self)
+                SVProgressHUD.showError(withStatus: "Failed")
+            } else {
+                print("Registration Successful")
+                SVProgressHUD.showSuccess(withStatus: "Succeeded")
+                self.performSegue(withIdentifier: "goToWelcome", sender: self)
             }
+            SVProgressHUD.dismiss(withDelay: 0.5)
         }
         
+    }
+    
+    
 
-        
-        
-    } 
     
     
 }

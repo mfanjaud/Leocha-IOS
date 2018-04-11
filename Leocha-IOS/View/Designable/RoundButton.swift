@@ -32,7 +32,7 @@ import UIKit
         UIGraphicsBeginImageContextWithOptions(size, true, 0.0)
         _color.setFill()
         UIRectFill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let bgImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() as UIImage!
+        let bgImage: UIImage = (UIGraphicsGetImageFromCurrentImageContext() as UIImage?)!
         UIGraphicsEndImageContext()
         setBackgroundImage(bgImage, for: UIControlState.normal)
         clipsToBounds = true
