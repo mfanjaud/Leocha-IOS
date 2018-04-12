@@ -8,105 +8,88 @@
 
 import UIKit
 import CoreLocation
-import Alamofire
 import SwiftyJSON
 
 class MeetupViewController: UITableViewController {
     
-    var eventsArray = [Meetup]()
+    var events = [[String: String]]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        //Set up the location manager here.
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
+        let urlString = "https://api.meetup.com/2/events?key=37ff185589205d45a216d543e76&group_urlname=lyontalks&sign=true"
         
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        parseJSON()
-       
-
-    }
-    
-    
-    //MARK: - Networking
-    /***************************************************************/
-
- 
-    
-    //MARK: - JSON Parsing
-    /***************************************************************/
-    
-    func parseJSON() {
-        let url = URL(string: "https://api.meetup.com/find/groups?photo-host=public&location=lyon&page=20&text=English&sig_id=250969086&sig=a3e509757d6ca5a8272f5c41b9bd5ed589961d24")
-        
-        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
-            
-            guard error == nil else {
-                print("returning error")
-                return
+        if let url = URL(string: urlString) {
+            if let data = try? String(contentsOf: url){
+                let json = JSON(parseJSON: data)
+                if json["results"] != JSON.null {
+                    print("Get data")
+                    parse(json: json)
+                    print(events)
+                }
             }
-            
-            guard let content = data else {
-                print("not returning data")
-                return
-            }
-            
-            
-            guard let json = (try? JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
-                print("Not containing JSON")
-                return
-            }
-            
-            if let array = json["companies"] as? [String] {
-                self.eventsArray = array
-            }
-            
-            print(self.eventsArray)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-            
         }
         
-        task.resume()
-        
     }
-
-}
-
-
-
-
-
-
-extension MeetupViewController {
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Parsing JSON
+    /***************************************************************/
+    func parse(json: JSON) {
+        for result in json["results"].arrayValue {
+            let title = result["name"].stringValue
+            let time = result["time"].stringValue
+            let venue = result["venue"]["name"].stringValue
+            let detail = result["description"].stringValue
+            let eventUrl = result["event_url"].stringValue
+            let participantCount = result["yes_rsvp_count"].stringValue
+            let obj = ["title": title, "time": time, "detail": detail , "venue": venue, "event URL" : eventUrl, "participation" : participantCount]
+            events.append(obj)
+        }
+        
+        tableView.reloadData()
+    }
+    
     
     //MARK: - TableView DataSource Methods
     /***************************************************************/
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = self.eventsArray[indexPath.row].eventName
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let events = self.events[indexPath.row]
+        cell.textLabel?.text = events["title"]
+        cell.detailTextLabel?.text = events["venue"]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.eventsArray.count
-        
+    
+    
+    //MARK: - TableView Delegate Methods
+    /***************************************************************/
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let events = self.events[indexPath.row]
+        let urlEvents = events["event URL"]
+        if let url = URL(string: urlEvents!) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
+    
+    
 }
+
+
     
 
 
